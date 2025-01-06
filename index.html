@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Virtual Assistant:Natasha">
+    <meta name="keywords" content=" Application of Artficial intelligence">
+    <link rel="shortcut icon" href="Natasha.jpg" type="image/x-icon">
+    <link rel="stylesheet"  type="text/css" href="style.css"/>
+    <title>Natasha</title>
+ <style type="text/css">
+</style>
+ 
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let hrs=document.getElementById("hrs");
+        let min=document.getElementById("min");
+        let sec=document.getElementById("sec");
+       
+       // console.log(currentTime); 
+        //  console.log(currentTime.getMinutes());
+        setInterval(() => {
+            let currentTime=new Date();
+            hrs.innerHTML=(currentTime.getHours()<10?"0":"")+currentTime.getHours();//Condition will apply for 01,02
+            min.innerHTML=(currentTime.getMinutes()<10?"0":"")+currentTime.getMinutes();
+            sec.innerHTML=(currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
+        }, 1000);
+       
+    </script>
+    <center><video id="video"src="v2.mp4"height="350px" muted autoplay loop></center>
+    <center><h1>I'm <span id="name">Natasha</span> Your <span id="va">Virtual Assistant</span></h1></center><br>
+    <center><img src="Voice_animation.gif" alt="loading"id="voice"></center>
+    <center><button onclick="changevideo()" id="btn">
+        <img id="bola" src="Miyke2.png" height="35px">
+        <span id="content">
+    Click Here To Talk to Me</span></button></center><br><br>
+    <center><button  style="background-color: black;border-radius: 50%;" onclick="changevideo1()">
+        <img  style="height: 70px;" src="m1.jpg" >
+    </button></center>
+        <script>
+            function changevideo(){
+                var vid= document.getElementById('video');
+                vid.src="v2.mp4";
+            }
+            function changevideo1(){
+                var vid= document.getElementById('video');
+                vid.src="v1.mp4";
+            }
+           </script>
+    <script src="script.js"></script>
+
+         
+
+</body>
+</html>
